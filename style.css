@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f6f8fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  transition: color .3s;
+}
+
+nav a:hover {
+  color: #3498db;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+.product-card .info {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card .info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.product-card .info p.description {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.product-card .info p.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.product-card button.add-to-cart {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0 0 8px 8px;
+  transition: background-color .3s;
+}
+
+.product-card button.add-to-cart:hover {
+  background-color: #2980b9;
+}
+
+.cart-summary {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 0 auto 40px;
+}
+
+.cart-summary h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.cart-summary ul {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.cart-summary ul li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.cart-summary .total {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .product-card .info p.description {
+    display: none;
+  }
+}
